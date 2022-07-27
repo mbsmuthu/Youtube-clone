@@ -1,0 +1,218 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    padding:.5rem 1rem;
+    display:flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.5);
+    position:sticky;
+    width:100vw;
+    top:0;
+    z-index: 2;
+}
+
+.flex-container{
+    display:flex;
+    align-items: center;
+}
+
+.image{
+    cursor:pointer;
+    
+}
+
+.nav-left, .nav-center, .nav-right{
+    gap:2rem;
+}
+
+.nav-left .menu-icon{
+    width:2rem;
+    margin-inline-start: 1rem;
+}
+
+.nav-left .logo-icon{
+    width:8rem;
+}
+
+.nav-center .search-box{
+   
+    padding:.5rem .75rem;
+    border:1px solid #ccc; 
+    border-radius: 1.5rem;
+    gap:.5rem;
+    background: transparent;
+}
+
+.nav-center .search-box .input-box{
+    width:25rem;
+    border:0;
+    outline: 0;
+}
+.nav-center .search-icon{
+    width:1.5rem;
+}
+
+.nav-center .mic-icon{
+    width:1.5rem;
+}
+
+.nav-center .mic-icon:hover{
+    border:1px solid black;
+    border-radius: 50%;
+    padding:.2rem;
+}
+
+
+
+.nav-right .more-icon{
+    width:2rem;
+}
+
+.nav-right .sign-in{
+    border:1px solid blue;
+    color:blue;
+    padding:.5rem;
+    border-radius:.2rem;
+    cursor:pointer;
+    margin-inline-end:1rem;
+    font-weight: 100;
+}
+
+.nav-right .sign-in:hover{
+    color:white;
+    background-color: blue;
+}
+
+/* sidebar */
+
+.sidebar{
+    background: white;
+    width:15%;
+    height:100vh;
+    position: fixed;
+    top:0;
+    padding-left: 2%;
+    padding-top:5rem;
+}
+
+.shortcut-links a img{
+    width:1.25rem;
+    margin-inline-end: 1.25rem;
+}
+
+.shortcut-links a{
+    display:flex;
+    align-items: center;
+    margin-block-end: 1.25rem;
+    width:fit-content;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color:black;
+}
+
+.shortcut-links a:first-child{
+    color:red;
+}
+
+.sidebar hr{
+    border:0;
+    height:1px;
+    background: #ccc;
+    width:85%;
+}
+
+.small-sidebar{
+    width:5%;
+}
+
+.small-sidebar a p{
+    display: none;
+}
+
+/* mainwindow */
+
+.container{
+    background: #f9f9f9;
+    padding:1.25rem 2% 1.25rem 15%;
+   
+}
+
+.large-container{
+    padding-left: 5%;
+}
+
+
+
+.list-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1rem 2rem;
+    margin-block-start: 1rem;
+}
+
+.video-list .thumbnail{
+    width:100%;
+    border-radius:.25rem;
+}
+
+.video-list .flex-container{
+    align-items: flex-start;
+    margin-block-start: .5rem;
+}
+
+.video-list .flex-container img{
+    width:2.5rem;
+    margin-inline-end: 1.2rem;
+    border-radius:50%;
+}
+
+.video-info{
+    color:#5a5a5a;
+    font-size: 1rem;
+}
+
+.video-info a{
+    color:black;
+    font-weight: 600;
+    display: block;
+    margin-block-end: .4rem;
+    text-decoration: none;
+}
+
+
+@media (max-width:900px){
+
+    .menu-icon{
+        display: none;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .container, .large-container{
+        padding-inline-start: 5%;
+        padding-inline-end: 5%;
+    }
+
+    .nav-right img{
+        display: none;
+    }
+
+    .nav-center .search-box .input-box{
+        width:6rem;
+    }
+
+    .nav-center .mic-icon{
+        display: none;
+    }
+
+    .logo{
+        width: 5rem;
+    }
+}

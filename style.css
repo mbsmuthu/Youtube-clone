@@ -7,6 +7,7 @@
 .navbar{
     padding:.5rem 1rem;
     display:flex;
+    flex:1;
     justify-content: space-between;
     background-color: white;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.5);
@@ -21,7 +22,7 @@
     align-items: center;
 }
 
-.image{
+img{
     cursor:pointer;
     
 }
@@ -46,6 +47,7 @@
     border-radius: 1.5rem;
     gap:.5rem;
     background: transparent;
+    flex:1;
 }
 
 .nav-center .search-box .input-box{
@@ -115,6 +117,10 @@
     color:black;
 }
 
+.shortcut-links a:hover{
+    color:red;
+}
+
 .shortcut-links a:first-child{
     color:red;
 }
@@ -123,7 +129,7 @@
     border:0;
     height:1px;
     background: #ccc;
-    width:85%;
+    width:75%;
 }
 
 .small-sidebar{
@@ -143,21 +149,32 @@
 }
 
 .large-container{
-    padding-left: 5%;
+    padding-inline-start: 5%;
 }
 
 
 
 .list-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     grid-gap: 1rem 2rem;
-    margin-block-start: 1rem;
+    
+
+    /* display: flex;
+    flex:1 0 auto;
+    flex-wrap:wrap;
+    gap:1.5rem; */
 }
 
 .video-list .thumbnail{
     width:100%;
     border-radius:.25rem;
+}
+
+.video-list .thumbnail:hover{
+    outline:1px solid grey;
+    transform: scale(1.05);
+    transition: 500ms;
 }
 
 .video-list .flex-container{
@@ -174,6 +191,7 @@
 .video-info{
     color:#5a5a5a;
     font-size: 1rem;
+    gap:.5rem;
 }
 
 .video-info a{
@@ -184,12 +202,16 @@
     text-decoration: none;
 }
 
+.video-info p{
+    font-size:.8rem;
+}
+
+
+
+
 
 @media (max-width:900px){
-
-    .menu-icon{
-        display: none;
-    }
+   
 
     .sidebar{
         display: none;
@@ -205,7 +227,7 @@
     }
 
     .nav-center .search-box .input-box{
-        width:6rem;
+        width:10rem;
     }
 
     .nav-center .mic-icon{
